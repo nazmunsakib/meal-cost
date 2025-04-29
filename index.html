@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meal Cost Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="calculatorContainer">
+      <h2>Meal Cost Calculator</h2>
+      
+      <div class="form-group">
+        <label for="mealCost">Meal Cost</label>
+        <input type="number" id="mealCost" placeholder="e.g. 500" />
+      </div>
+  
+      <div class="form-group">
+        <label for="otherCost">Other Costs</label>
+        <input type="number" id="otherCost" placeholder="e.g. 200" />
+      </div>
+  
+      <div class="form-group">
+        <label for="memberCount">Number of Members</label>
+        <input type="number" id="memberCount" placeholder="e.g. 3" />
+      </div>
+  
+      <div class="members" id="membersContainer"></div>
+
+      <div class="result-container">
+        <div class="final-result-container">
+          <div class="final-result">
+              <div class="result-group">
+                  <span class="result-title">Per Member Subsidy:</span>
+                  <span class="result-number" id="memberSubsidy">৳ 0.00</span>
+              </div>
+              <div class="result-group">
+                  <span class="result-title">Total Subsidy:</span>
+                  <span class="result-number" id="total-subsidy">৳ 0.00</span>
+              </div>
+          </div>
+        </div>
+  
+        <div class="final-result-container">
+          <div class="final-result">
+              <div class="result-group">
+                  <span class="result-title">Total Meal:</span>
+                  <span class="result-number" id="totalMeal" data-totla-meal="0">000</span>
+              </div>
+              <div class="result-group">
+                  <span class="result-title">Total Cost:</span>
+                  <span class="result-number" id="total-cost">৳ 0.00</span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="buttons-grupe">
+      <button id="calculate-cost">Calculate</button>
+      <button id="download-reasult" style="display: none;">Download Report</button>
+    </div>
+  </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
