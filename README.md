@@ -18,7 +18,7 @@ A simple HTML project to calculate meal costs.
 meal-cost/
 ├── index.html
 ├── style.css
-└── script.js
+└── app.js
 ```
 
 ## 📄 License
