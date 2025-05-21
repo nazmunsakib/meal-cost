@@ -49,7 +49,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-    padding: 0.75rem;
+    padding: 5px 10px;
     background: #f9f9f9;
     border-radius: 8px;
     gap: 1rem;
@@ -69,6 +69,10 @@ body {
     color: #2d6a4f;
     text-align: right;
   }
+
+.cost-details span {
+    display: block;
+}
 
 
 .result-group {
@@ -110,10 +114,13 @@ button:hover {
     background-color: #245d3e;
 }
 
-span.cost-details {
-  flex: 1;
+.cost-details {
+  flex: 2;
   font-size: 12px;
   font-weight: 400;
+  color: #2d6a4f;
+  text-align: right;
+  margin: 5px;
 }
 .buttons-grupe {
   margin-top: 20px;

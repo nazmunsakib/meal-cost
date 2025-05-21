@@ -27,10 +27,19 @@
           costSpan.className = 'cost';
           costSpan.textContent = '৳ 0.00';
 
-          const details = document.createElement('span');
+          const details = document.createElement('p');
           details.className = 'cost-details';
-          details.textContent = 'Others Cost + Meal Cost =';
-  
+
+          const costNote = document.createElement('span');
+          costNote.className = 'cost-note';
+          costNote.textContent = 'Others Cost + Meal Cost =';
+
+          const costReduce = document.createElement('span');
+          costReduce.className = 'cost-reduce';
+          costReduce.textContent = 'Reduce ৳ 0.00';
+
+          details.appendChild(costNote);
+          details.appendChild(costReduce);
           div.appendChild(nameInput);
           div.appendChild(mealInput);
           div.appendChild(details);
@@ -78,14 +87,23 @@
             const meals         = parseInt(mealInput.value) || 0;
             const mealCost      = perMealCost * meals;
             const memberCost    = otherCost + mealCost;
-
+            const subsidy       = otherCost + (perMealCost * 22) - 1000;
+            
             totalCost += memberCost;
+
+            const reduce  = memberCost - subsidy;
+            
+
+            
 
             // const costDetails = member.querySelector('.cost-details');
             // costDetails.textContent = `${parseInt(otherCost)} + (${parseInt(mealCost)} * ${meals}) =`;
 
-            const costSpan = member.querySelector('.cost');
-            costSpan.textContent = `৳ ${memberCost.toFixed(2)}`;
+            const costSpan    = member.querySelector('.cost');
+            const costReduce  = member.querySelector('.cost-reduce');
+
+            costSpan.textContent    = `৳ ${memberCost.toFixed(2)}`;
+            costReduce.textContent  = `Cut: ৳ ${reduce.toFixed(2)}`;
         });
 
         const memberSubsidy = otherCost + (perMealCost * 22) - 1000;
