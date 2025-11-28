@@ -75,8 +75,8 @@
         return totalMeal;
       }
 
-      function getMemberCosts(selector, perMealCost, otherCost, totalMember = 5){
-        if( !selector || !perMealCost || !otherCost ){
+      function getMemberCosts(selector, perMealCost, otherCost = 0, totalMember = 5){
+        if( !selector || !perMealCost ){
             return false;
         }
 
